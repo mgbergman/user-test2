@@ -14,6 +14,7 @@ import { BoolDisplayPipe } from './pipes/bool-display.pipe';
 import { PasswordPipe } from './pipes/password.pipe';
 import { UserSearchPipe } from './user/user-search.pipe';
 import { SortPipe } from './pipes/sort.pipe';
+import { MenuComponent } from './menu/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SortPipe } from './pipes/sort.pipe';
     BoolDisplayPipe,
     PasswordPipe,
     UserSearchPipe,
-    SortPipe
+    SortPipe,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

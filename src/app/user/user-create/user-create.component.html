@@ -1,23 +1,31 @@
 
 
 
+
+
+<tr>
+    <td>Id:</td>
+    <td>
+        <input [(ngModel)]="user.id" type="text" size="10" disabled>
+    </td>
+</tr>
+
+
  
+    <td>Username:</td>
+    <td>
+        <input [(ngModel)]="user.userName" type="text" size="10" >
+    </td>
     <tr>
-        <th>User Name</th>
+        <td>First Name:</td>
         <td>
-            <input [(ngModel)]="user.userName" type="text" size="10">
-        </td>
-    </tr>
-    <tr>
-        <th>First Name</th>
-        <td>
-            <input [(ngModel)]="user.firstName" type="text" size="10">
+            <input [(ngModel)]="user.firstName" type="text" size="20">
         </td>
     </tr>
     <tr>
         <th>Last Name</th>
         <td>
-            <input [(ngModel)]="user.lastName" type="text" size="10">
+            <input [(ngModel)]="user.lastName" type="text" size="30">
         </td>
     </tr>
     <tr>
@@ -35,7 +43,7 @@
     <tr>
         <th>Email</th>
         <td>
-            <input [(ngModel)]="user.email" type="text" size="10">
+            <input [(ngModel)]="user.email" type="text" size="20">
         </td>
     </tr>
     <tr>
@@ -49,7 +57,7 @@
         <td>
             <input [(ngModel)]="user.isReviewer" type="checkbox" size="10">
         </td>
-    </tr>
+    </tr> -->
 
     <tr>
         <td colspan="2">

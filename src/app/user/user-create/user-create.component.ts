@@ -9,8 +9,18 @@ import { ActivatedRoute, Router} from '@angular/router'
   styleUrls: ['./user-create.component.css']
 })
 export class UserCreateComponent implements OnInit {
-
-  user: User;
+  user: User = new User();
+  save(): void{
+    this.usersvc.create(this.user).subscribe(
+      res=>{
+        console.debug("User created:",res);
+        this.router.navigateByUrl("/users/list");
+      },
+      err => {
+        console.error("ERROR creating user:",err);
+      }
+    )
+  }
 
   constructor(
     private usersvc: UserService,
@@ -18,17 +28,7 @@ export class UserCreateComponent implements OnInit {
     private router: Router
   ) { }
 
-  save(): void{
-    console.log(this.user)
-    this.usersvc.change(this.user).subscribe(
-      res => {
-        console.debug("User Change:", res);
-        this.router.navigateByUrl("/users/change")
-        this.user = res;
-      },
-      err => { console.error(err); } 
-    )
-}
+  
   
 
   ngOnInit(): void {

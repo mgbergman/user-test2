@@ -17,6 +17,11 @@ export class VendorService {
     list(): Observable<Vendor[]> {
       return this.http.get(`${baseurl}`) as Observable<Vendor[]>;
     }
-
+    change (vendor:Vendor): Observable<Vendor> {
+      return this.http.put(`${baseurl}/${vendor.id}`, vendor) as Observable<Vendor>;
+    }
+    get(id: number): Observable<Vendor> {
+      return this.http.get(`${baseurl}/${id}`) as Observable<Vendor>;
+    }
 
 }
