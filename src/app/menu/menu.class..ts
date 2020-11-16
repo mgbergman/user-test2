@@ -8,3 +8,4 @@ export class Menu {
         this.route = route;
         this.tooltip = tooltip;
 }
+}

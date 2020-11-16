@@ -29,7 +29,9 @@ export class UserService {
   create (user: User): Observable<User> {
     return this.http.post(`${baseurl}`, user) as Observable<User>;
   }
-  
+  remove(user:User): Observable<User> {
+    return this.http.delete('${baseurl}/${user.id}') as Observable<User>;
+  }
 
 
 }

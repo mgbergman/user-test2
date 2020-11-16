@@ -15,6 +15,11 @@ import { PasswordPipe } from './pipes/password.pipe';
 import { UserSearchPipe } from './user/user-search.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { MenuComponent } from './menu/menu/menu.component';
+import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
+import { UserDeleteComponent } from './user/user-delete/user-delete.component';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductEditComponent } from './product/product-edit/product-edit.component';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +33,11 @@ import { MenuComponent } from './menu/menu/menu.component';
     PasswordPipe,
     UserSearchPipe,
     SortPipe,
-    MenuComponent
+    MenuComponent,
+    VendorCreateComponent,
+    UserDeleteComponent,
+    ProductListComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,

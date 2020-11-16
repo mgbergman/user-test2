@@ -3,7 +3,7 @@ import { HttpClient} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Vendor} from './vendor.class';
 
-const baseurl = "http://localhost:8080/api/vendors";
+const baseurl = "http://localhost:8080/api/vendors/";
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +22,9 @@ export class VendorService {
     }
     get(id: number): Observable<Vendor> {
       return this.http.get(`${baseurl}/${id}`) as Observable<Vendor>;
+    }
+    create (vendor: Vendor): Observable<Vendor> {
+      return this.http.post(`${baseurl}`, vendor) as Observable<Vendor>;
     }
 
 }
